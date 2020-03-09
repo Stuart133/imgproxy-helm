@@ -69,6 +69,7 @@ ingress:
     key: ""
     secretName: ""
   #   nginx.ingress.kubernetes.io/proxy-body-size: "32m"
+  path: /
 
 serviceMonitor:
   enabled: false
