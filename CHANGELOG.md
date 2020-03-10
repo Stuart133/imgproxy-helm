@@ -1,3 +1,8 @@
+## 0.5.5
+
+* (New) Add custom path
+* (New) Add support for custom s3 endpoint created from release name
+* (New) Allow key and salt to be specified in plain text and converted to hex by chart
 
 ## 0.5.3 (2020-03-03)
 
