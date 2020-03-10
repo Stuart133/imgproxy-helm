@@ -1,3 +1,5 @@
+{{- $s3endpoint := include "s3-endpoint" . -}}
+
 apiVersion: {{ .Values.apiVersion }}
 kind: Deployment
 metadata:
@@ -239,7 +241,7 @@ spec:
         - name: IMGPROXY_S3_REGION
           value: {{ .Values.awsRegion | quote }}
         - name: IMGPROXY_S3_ENDPOINT
-          value: {{ .Values.s3Endpoint | quote }}
+          value: {{ $s3endpoint }}
         {{- end }}
 
         {{- if .Values.gcsKey }}

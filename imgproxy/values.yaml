@@ -258,8 +258,11 @@ awsSecret: ""
 # AWS region
 awsRegion: ""
 
-# Custom S3 endpoint to being used by imgproxy
+# Custom S3 endpoint to being used by imgproxy (Not being used in this fork)
 s3Endpoint: ""
+
+# Name of minio chart (Used to create endpoint with release name and release namespace for direct service call)
+minioChartName: ""
 
 # Google Cloud JSON key. When set, enables image fetching from Google Cloud Storage buckets
 gcsKey: ""
