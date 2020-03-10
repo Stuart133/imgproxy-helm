@@ -8,8 +8,8 @@ metadata:
     chart: "{{ .Chart.Name }}-{{ .Chart.Version }}"
     release: "{{ .Release.Name }}"
     heritage: "{{ .Release.Service }}"
-{{- if or .Values.ingress.annotations (and .Values.ingress.tls.enabled .Values.ingress.acme) }}
   annotations:
+{{- if or .Values.ingress.annotations (and .Values.ingress.tls.enabled .Values.ingress.acme) }}
 {{ toYaml .Values.ingress.annotations | indent 4 }}
 {{- if and .Values.ingress.tls.enabled .Values.ingress.acme }}
     kubernetes.io/tls-acme: "true"
